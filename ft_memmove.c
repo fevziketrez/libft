@@ -14,5 +14,5 @@ void *ft_memmove(void *s1, const void *s2, size_t n)
 {
     char*   ptr;
     ptr = ft_memcpy(s2)
-s
+ss
 }

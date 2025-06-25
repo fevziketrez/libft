@@ -6,14 +6,14 @@
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 13:21:35 by fketrez           #+#    #+#             */
-/*   Updated: 2025/06/25 13:21:35 by fketrez          ###   ########.fr       */
+/*   Updated: 2025/06/25 22:35:30 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 static size_t	ft_strlen(char* str)
 {
 	size_t i;
-    
+
     i = 0;
     while (str[i])
         i++;

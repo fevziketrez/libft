@@ -6,14 +6,16 @@
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 13:03:03 by fketrez           #+#    #+#             */
-/*   Updated: 2025/06/25 13:03:03 by fketrez          ###   ########.fr       */
+/*   Updated: 2025/07/05 13:22:31 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(char c)
 {
 	if (0 <= c && c <= 127)
-		return 1;
+		return (1);
 	else
-		return 0;
+		return (0);
 }

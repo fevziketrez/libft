@@ -6,19 +6,21 @@
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 13:14:16 by fketrez           #+#    #+#             */
-/*   Updated: 2025/06/25 13:14:16 by fketrez          ###   ########.fr       */
+/*   Updated: 2025/07/05 13:30:59 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_bzero(void *s, size_t n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-    char *str;
-w
-    str = s;
-    while (n)
-    {
-        *i = 0;
-        i++;
-        n--;
-    }
+	unsigned char	*str;
+
+	str = (unsigned char*)s;
+	while (n > 0)
+	{
+		*str = 0;
+		str++;
+		n--;
+	}
 }

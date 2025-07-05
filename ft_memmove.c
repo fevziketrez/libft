@@ -11,15 +11,16 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-void *ft_memmove(void *s1, const void *s2, size_t n)
-{
-    unsigned char* ptr1;
-	unsigned char* ptr2;
 
-	ptr1 = (unsigned char*)s1;
-	ptr2 = (unsigned char*)s2;
+void	*ft_memmove(void *s1, const void *s2, size_t n)
+{
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
+
+	ptr1 = (unsigned char *)s1;
+	ptr2 = (unsigned char *)s2;
 	if (!ptr1 && !ptr2)
-		return 0;
+		return (0);
 	if (ptr1 == ptr2 || n == 0)
 		return (s1);
 	if (s2 < s1)

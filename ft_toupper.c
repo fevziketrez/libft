@@ -6,13 +6,15 @@
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 13:28:13 by fketrez           #+#    #+#             */
-/*   Updated: 2025/06/25 13:28:13 by fketrez          ###   ########.fr       */
+/*   Updated: 2025/07/05 13:30:17 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
-    if (97 <= c && c <= 122)
-        c -= 32;
-    return (c);
+	if (97 <= c && c <= 122)
+		c -= 32;
+	return (c);
 }

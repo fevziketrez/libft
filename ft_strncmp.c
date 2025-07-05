@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/25 13:06:37 by fketrez           #+#    #+#             */
-/*   Updated: 2025/07/05 13:24:04 by fketrez          ###   ########.fr       */
+/*   Created: 2025/06/27 16:35:21 by fketrez           #+#    #+#             */
+/*   Updated: 2025/07/05 13:17:12 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char c)
+int	strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (32 <= c && c <= 126)
-		return (1);
-	else
+	size_t	i;
+
+	i = 0;
+	if (n == 0)
 		return (0);
+	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n - 1)
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

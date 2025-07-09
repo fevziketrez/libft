@@ -6,7 +6,7 @@
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 22:56:24 by fketrez           #+#    #+#             */
-/*   Updated: 2025/07/09 23:12:04 by fketrez          ###   ########.fr       */
+/*   Updated: 2025/07/09 23:20:18 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);
 		i++;

@@ -6,7 +6,7 @@
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 21:22:25 by fketrez           #+#    #+#             */
-/*   Updated: 2025/07/09 18:58:09 by fketrez          ###   ########.fr       */
+/*   Updated: 2025/07/10 01:02:23 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	int_digits(int n)
 {
-	int	i;
+	int		i;
 	long	lo_n;
 
 	i = 0;
@@ -36,7 +36,7 @@ static int	int_digits(int n)
 
 static char	*ft_itoa_helper(char *s, int num, int digit)
 {
-	long lo_n;
+	long	lo_n;
 
 	s[digit] = '\0';
 	if (num == 0)
@@ -62,7 +62,7 @@ static char	*ft_itoa_helper(char *s, int num, int digit)
 char	*ft_itoa(int n)
 {
 	char	*s;
-	int	digit;
+	int		digit;
 
 	digit = int_digits(n);
 	s = malloc(digit + 1);

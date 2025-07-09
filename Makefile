@@ -6,7 +6,7 @@
 #    By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/28 18:40:17 by fketrez           #+#    #+#              #
-#    Updated: 2025/07/09 23:09:24 by fketrez          ###   ########.fr        #
+#    Updated: 2025/07/10 00:55:34 by fketrez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRCS =	ft_atoi.c \
 		ft_isprint.c \
 		ft_itoa.c \
 		ft_memchr.c \
+		ft_memcmp.c \
 		ft_memcpy.c \
 		ft_memmove.c \
 		ft_memset.c \

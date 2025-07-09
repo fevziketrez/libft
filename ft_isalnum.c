@@ -6,7 +6,7 @@
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 16:41:22 by fketrez           #+#    #+#             */
-/*   Updated: 2025/07/05 13:15:45 by fketrez          ###   ########.fr       */
+/*   Updated: 2025/07/05 19:17:19 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalnum(char c)
 {
-	return (ft_isalpha(c) && ft_isdigit(c));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

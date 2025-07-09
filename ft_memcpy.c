@@ -6,7 +6,7 @@
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 13:17:36 by fketrez           #+#    #+#             */
-/*   Updated: 2025/07/05 13:29:08 by fketrez          ###   ########.fr       */
+/*   Updated: 2025/07/07 12:00:36 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	ptr1 = (unsigned char *)dest;
 	ptr2 = (unsigned char *)src;
-	if (!ptr1 && !ptr2)
-		return (0);
+	if (!dest && !src)
+		return (dest);
 	while (n-- > 0)
 		*(ptr1++) = *(ptr2++);
 	return (dest);

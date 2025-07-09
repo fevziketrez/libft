@@ -6,7 +6,7 @@
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/05 01:29:36 by fketrez           #+#    #+#             */
-/*   Updated: 2025/07/05 13:23:50 by fketrez          ###   ########.fr       */
+/*   Updated: 2025/07/09 20:10:28 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,15 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	return ;
+	t_list	*next;
+
+	if (!lst || !del)
+		return ;
+	while (*lst)
+	{
+		next = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = next;
+	}
+	*lst = NULL;
 }

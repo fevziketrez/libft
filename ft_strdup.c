@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/27 16:35:21 by fketrez           #+#    #+#             */
-/*   Updated: 2025/07/05 19:12:13 by fketrez          ###   ########.fr       */
+/*   Created: 2025/07/09 20:56:35 by fketrez           #+#    #+#             */
+/*   Updated: 2025/07/09 21:57:18 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strdup(const char *str)
 {
-	size_t	i;
+	size_t	len;
+	char	*temp;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n - 1)
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	len = ft_strlen(str);
+	temp = malloc(len + 1);
+	if (!temp)
+		return (NULL);
+	ft_memcpy(temp, str, len + 1);
+	return (temp);
 }

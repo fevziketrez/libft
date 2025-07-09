@@ -6,7 +6,7 @@
 #    By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/28 18:40:17 by fketrez           #+#    #+#              #
-#    Updated: 2025/07/05 13:35:06 by fketrez          ###   ########.fr        #
+#    Updated: 2025/07/09 21:27:12 by fketrez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,46 +16,65 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = 	ft_bzero.c \
+SRCS =	ft_atoi.c \
+		ft_bzero.c \
+		ft_calloc.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
 		ft_isascii.c \
 		ft_isdigit.c \
 		ft_isprint.c \
+		ft_itoa.c \
 		ft_memchr.c \
-		ft_memcmp.c \
 		ft_memcpy.c \
 		ft_memmove.c \
 		ft_memset.c \
-		ft_split.c \
 		ft_strchr.c \
-		ft_strcmp.c \
+		ft_strdup.c \
 		ft_strjoin.c \
 		ft_strlcat.c \
 		ft_strlcpy.c \
 		ft_strlen.c \
 		ft_strncmp.c \
+		ft_strnstr.c \
 		ft_strrchr.c \
+		ft_strtrim.c \
 		ft_substr.c \
 		ft_tolower.c \
 		ft_toupper.c \
 
-##SRCS_BONUS =
+#		ft_split.c \
+
+
+SRCS_BONUS =	ft_lstadd_back_bonus.c \
+				ft_lstadd_front_bonus.c \
+				ft_lstclear_bonus.c \
+				ft_lstdelone_bonus.c \
+				ft_lstiter_bonus.c \
+				ft_lstlast_bonus.c \
+				ft_lstmap_bonus.c \
+				ft_lstnew_bonus.c \
+				ft_lstsize_bonus.c \
+				ft_lstmap_bonus.c
+
 
 OBJECTS = $(SRCS:.c=.o)
-##OBJ_BONUS = $(SRCS_BONUS:.c=o)
+OBJ_BONUS = $(SRCS_BONUS:.c=.o)
 
 all:	$(NAME)
 
 $(NAME): $(OBJECTS)
 		ar rcs $(NAME) $(OBJECTS)
 
+bonus: $(OBJ_BONUS)
+		ar rcs $(NAME) $(OBJ_BONUS)
+
 clean:
-		rm -f $(OBJECTS)
+		rm -f $(OBJECTS) $(OBJ_BONUS)
 
 fclean: clean
 		rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re bonus

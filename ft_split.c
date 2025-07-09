@@ -6,7 +6,7 @@
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 16:52:18 by fketrez           #+#    #+#             */
-/*   Updated: 2025/07/10 02:06:34 by fketrez          ###   ########.fr       */
+/*   Updated: 2025/07/10 02:13:32 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,5 +120,7 @@ int	main(void)
 		printf("%s\n", res[i]);
 		i++;
 	}
+	free_all(res);
+	free(ptr);
 	return (1);
 }

@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/06/28 18:40:17 by fketrez           #+#    #+#              #
-#    Updated: 2025/07/10 00:55:34 by fketrez          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = libft.a
 
 CC = cc
@@ -74,7 +62,7 @@ $(NAME): $(OBJECTS)
 		ar rcs $(NAME) $(OBJECTS)
 
 bonus: $(OBJ_BONUS)
-		ar rcs $(NAME) $(OBJ_BONUS)
+		ar rcs $(NAME) $(OBJECTS) $(OBJ_BONUS)
 
 clean:
 		rm -f $(OBJECTS) $(OBJ_BONUS)

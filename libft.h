@@ -6,7 +6,7 @@
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 00:57:33 by fketrez           #+#    #+#             */
-/*   Updated: 2025/07/10 02:28:10 by fketrez          ###   ########.fr       */
+/*   Updated: 2025/07/10 05:05:36 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ typedef struct s_list
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t number, size_t size);
-int		ft_isalnum(char c);
-int		ft_isalpha(char c);
-int		ft_isascii(char c);
-int		ft_isdigit(char c);
-int		ft_isprint(char c);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isascii(int c);
+int		ft_isdigit(int c);
+int		ft_isprint(int c);
 char	*ft_itoa(int n);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);

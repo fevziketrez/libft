@@ -61,7 +61,7 @@ all:	$(NAME)
 $(NAME): $(OBJECTS)
 		ar rcs $(NAME) $(OBJECTS)
 
-bonus: $(OBJ_BONUS)
+bonus: $(OBJECTS) $(OBJ_BONUS)
 		ar rcs $(NAME) $(OBJECTS) $(OBJ_BONUS)
 
 clean:

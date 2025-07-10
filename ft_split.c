@@ -6,7 +6,7 @@
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 16:52:18 by fketrez           #+#    #+#             */
-/*   Updated: 2025/07/10 02:13:32 by fketrez          ###   ########.fr       */
+/*   Updated: 2025/07/10 05:18:43 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,20 +107,4 @@ char	**ft_split(char const *s, char c)
 		i = i + len_space(&s[i], c);
 	}
 	return (res);
-}
-
-int	main(void)
-{
-	int i = 0;
-	char *ptr = ft_strdup("   abc  de f  f");
-	char **res = ft_split(ptr, ' ');
-//	printf("%s", res[0]);
-	while (res[i])
-	{
-		printf("%s\n", res[i]);
-		i++;
-	}
-	free_all(res);
-	free(ptr);
-	return (1);
 }

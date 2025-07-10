@@ -6,12 +6,11 @@
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 16:52:18 by fketrez           #+#    #+#             */
-/*   Updated: 2025/07/10 05:18:43 by fketrez          ###   ########.fr       */
+/*   Updated: 2025/07/10 18:26:31 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	len_space(char const *s, char c)
 {
@@ -52,25 +51,6 @@ static size_t	word_cnt(char const *s, char c)
 	return (words);
 }
 
-// char	**ft_split(char const *s, char c)
-// {
-// 	char	**res;
-// 	size_t	i;
-// 	size_t	word_i;
-
-// 	res = (char **)malloc(word_cnt(s, c) + 1);
-// 	if (res == NULL)
-// 		return (NULL);
-// 	i = 0;
-// 	word_i = 0;
-// 	while (s[i])
-// 	{
-// 		res[word_i] = ft_substr(s, i, len_nonspace(s, c));
-// 		i++;
-// 	}
-// 	return (res);
-// }
-
 static void	free_all(char **str)
 {
 	int	i;
@@ -90,15 +70,16 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	word_i;
 
-	res = (char **)ft_calloc(sizeof(char *) * word_cnt(s, c) + 1, 1);
-	if (res == NULL || !s)
+	if (!s)
+		return (NULL);
+	res = (char **)ft_calloc(word_cnt(s, c) + 1, sizeof(char *));
+	if (res == NULL)
 		return (NULL);
 	i = 0;
 	word_i = 0;
 	while (s[i])
 	{
 		i = i + len_space(&s[i], c);
-//		printf("%c\n", s[i]);
 		res[word_i] = ft_substr(s, i, len_nonspace(&s[i], c));
 		if (!res[word_i])
 			return (free_all(res), (NULL));
@@ -106,5 +87,7 @@ char	**ft_split(char const *s, char c)
 		word_i++;
 		i = i + len_space(&s[i], c);
 	}
+	free(res[word_cnt(s, c)]);
+	res[word_cnt(s, c)] = NULL;
 	return (res);
 }

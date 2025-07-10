@@ -60,8 +60,8 @@ all:	$(NAME)
 $(NAME): $(OBJECTS)
 		ar rcs $(NAME) $(OBJECTS)
 
-bonus: $(OBJECTS) $(OBJ_BONUS)
-		ar rcs $(NAME) $(OBJECTS) $(OBJ_BONUS)
+bonus: $(OBJ_BONUS)
+		ar rcs $(NAME) $(OBJ_BONUS)
 
 clean:
 		rm -f $(OBJECTS) $(OBJ_BONUS)

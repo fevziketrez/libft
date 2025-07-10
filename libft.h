@@ -6,12 +6,14 @@
 /*   By: fketrez <fketrez@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 00:57:33 by fketrez           #+#    #+#             */
-/*   Updated: 2025/07/10 05:18:41 by fketrez          ###   ########.fr       */
+/*   Updated: 2025/07/10 18:28:28 by fketrez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
@@ -62,3 +64,5 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+#endif
